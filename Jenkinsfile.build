@@ -6,7 +6,7 @@ WORKSPACE="workspace"
 PROJECT_PATH=WORKSPACE_PARENT + "/" + WORKSPACE + "/" + PROJECT
 ARTIFACTID='composition'
 
-stage $PROJECT + ' version ' + env.GTC_VERSION + ' start'
+stage PROJECT + ' version ' + env.GTC_VERSION + ' start'
   
 stage 'git clone'
 git 'https://github.com/glytoucan/WurcsToCompositionBatch.git'

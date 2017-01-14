@@ -8,9 +8,9 @@ services:
   batch:
     image: java:8u91-jdk
     working_dir: /data
-    command: java -jar ${PROJECT_NAME}-${BATCH_VERSION}.jar
+    command: java -jar ${PROJECT_FILE}${VERSION_NUMBER}.jar
     volumes:
-      - /home/jenkins/batch/${PROJECT_NAME}:/root/batch/${PROJECT_NAME}
+      - /home/jenkins/batch/${PROJECT_FILE}:/root/batch/${PROJECT_FILE}
     volumes_from:
       - data
     environment:
