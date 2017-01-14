@@ -1,5 +1,5 @@
 node {
-GTC_VERSION=1.2.7-TOCO
+GTC_VERSION="1.2.7-TOCO"
 PROJECT_NAME="composition"
 
 if (env.UPDATE != null) {
