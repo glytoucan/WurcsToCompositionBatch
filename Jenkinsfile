@@ -14,7 +14,7 @@ if (env.UPDATE != null) {
 }
 
 stage 'run batch'
-sh 'echo PROJECT_NAME=' + PROJECT_NAME + ' VERSION=' + VERSION + ' docker-compose -f docker-compose.prod.yml up --remove-orphans'
+sh 'echo PROJECT_FILE=' + PROJECT_NAME + ' PROJECT_NAME=' + PROJECT_NAME + ' VERSION=' + VERSION + ' docker-compose -f docker-compose.prod.yml up --remove-orphans'
 sh 'PROJECT_NAME=' + PROJECT_NAME + ' VERSION=' + VERSION + ' docker-compose -f docker-compose.prod.yml up --remove-orphans'
 
 stage 'rm batch'
