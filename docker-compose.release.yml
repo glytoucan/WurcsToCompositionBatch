@@ -3,9 +3,9 @@ services:
   data:
     build: $DOCKER_PATH/docker-release
     image: glycoinfo.org:5000/glytoucan_wurcstocomposition:v${GTC_VERSION}
-    container_name: glytoucanWurcsToComposition:v${GTC_VERSION}
+    container_name: glytoucanWurcsToCompositionv${GTC_VERSION}
     volumes:
-      - ${WORKSPACE_PARENT}/${WORKSPACE}/${PROJECT_NAME}:/workspace/${PROJECT_NAME}
+      - ${WORKSPACE_PARENT}/${WORKSPACE}:/workspace/${PROJECT_NAME}
     environment:
       - GTC_VERSION
       - PROJECT_NAME
