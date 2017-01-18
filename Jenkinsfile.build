@@ -6,7 +6,7 @@ node {
   VERSION="1.2.1-SNAPSHOT"
   PROJECT_PATH=WORKSPACE_PARENT + "/" + WORKSPACE + "/" + PROJECT
   ARTIFACTID='composition'
-  PROJECT_FILE='wurcstocomposition'
+  PROJECT_FILE='composition'
   PROJECT_NAME='WurcsToCompositionBatch'
 
   stage PROJECT + ' version ' + VERSION + ' start'

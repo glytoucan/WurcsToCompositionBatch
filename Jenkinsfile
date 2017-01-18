@@ -1,6 +1,6 @@
 node {
   VERSION="1.2.1-SNAPSHOT"
-  PROJECT_NAME="wurcstocomposition"
+  PROJECT_NAME="composition"
 
   if (env.UPDATE != null) {
       stage 'git'
