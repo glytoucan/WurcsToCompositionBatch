@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.glytoucan.batch.wurcs</groupId>
-	<artifactId>wurcstocomposition</artifactId>
+	<artifactId>composition</artifactId>
 	<parent>
 		<groupId>org.glytoucan</groupId>
 		<artifactId>pom-site</artifactId>
@@ -18,10 +18,6 @@
 				<exclusion>
 					<groupId>org.springframework.boot</groupId>
 					<artifactId>spring-jdbc</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>org.slf4j</groupId>
-					<artifactId>log4j-over-slf4j</artifactId>
 				</exclusion>
 			</exclusions>
 		</dependency>
@@ -62,11 +58,17 @@
 			<groupId>org.springframework.batch</groupId>
 			<artifactId>spring-batch-test</artifactId>
 			<scope>test</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-jdbc</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.glycoinfo</groupId>
 			<artifactId>wurcsframework</artifactId>
-			<version>0.0.4-SNAPSHOT</version>
+			<version>0.0.6-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 	<build>
@@ -74,9 +76,6 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-					<mainClass>${spring.mainClass}</mainClass>
-				</configuration>
         <executions>
           <execution>
             <goals>
