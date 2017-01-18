@@ -2,7 +2,7 @@ version: '2'
 services:
   data:
     build: $DOCKER_PATH/docker-release
-    image: glycoinfo.org:5000/glytoucan_wurcstocomposition:v${VERSION}
+    image: glycoinfo.org:5000/glytoucan_composition:v${VERSION}
     container_name: glytoucanWurcsToCompositionv${VERSION}
     volumes:
       - ${WORKSPACE_PARENT}/${WORKSPACE}:/workspace/${PROJECT_NAME}
