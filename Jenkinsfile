@@ -4,13 +4,13 @@ node {
 
   if (env.UPDATE != null) {
       stage 'git'
-        git 'https://github.com/glytoucan/WurcsToCompositionBatch.git'
+      git 'https://github.com/glytoucan/WurcsToCompositionBatch.git'
 
-          stage 'docker rm'
-            sh 'docker-compose -f docker-compose.prod.yml rm -f'
+      stage 'docker rm'
+      sh 'docker-compose -f docker-compose.prod.yml rm -f'
 
-              stage 'docker pull'
-                sh 'PROJECT_NAME=' + PROJECT_NAME + ' VERSION=' + VERSION + ' docker-compose -f docker-compose.prod.yml pull'
+      stage 'docker pull'
+      sh 'PROJECT_NAME=' + PROJECT_NAME + ' VERSION=' + VERSION + ' docker-compose -f docker-compose.prod.yml pull'
   }
 
   stage 'run batch'
